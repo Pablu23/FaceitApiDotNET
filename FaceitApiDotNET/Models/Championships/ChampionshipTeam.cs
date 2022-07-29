@@ -29,7 +29,7 @@ public class ChampionshipTeam
     public string Leader { get; set; }
 
     [JsonProperty("members")]
-    public List<ChampionshipTeamMember> Members { get; set; }
+    public List<ChampionshipPlayer> Members { get; set; }
 
     [JsonProperty("name")]
     public string Name { get; set; }

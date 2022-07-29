@@ -2,7 +2,7 @@
 
 namespace FaceitApiDotNET.Models.Championships;
 
-public class ChampionshipTeamMember
+public class ChampionshipPlayer
 {
     [JsonProperty("avatar")]
     public string Avatar { get; set; }
