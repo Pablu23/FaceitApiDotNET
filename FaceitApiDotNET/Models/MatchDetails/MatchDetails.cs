@@ -58,7 +58,7 @@ public class MatchDetails
     public int BestOf { get; set; }
 
     [JsonProperty("results")]
-    public MatchResults Results { get; set; }
+    public Results Results { get; set; }
 
     [JsonProperty("status")]
     public string Status { get; set; }

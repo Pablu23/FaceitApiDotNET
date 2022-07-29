@@ -55,7 +55,7 @@ public class Match
     public int FinishedAt { get; set; }
 
     [JsonProperty("results")]
-    public MatchResults Results { get; set; }
+    public Results Results { get; set; }
 
     [JsonProperty("faceit_url")]
     public string FaceitUrl { get; set; }

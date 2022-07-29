@@ -58,7 +58,7 @@ public class ChampionshipMatch
     public string Region { get; set; }
 
     [JsonProperty("results")]
-    public MatchResults Results { get; set; }
+    public Results Results { get; set; }
 
     [JsonProperty("round")]
     public int Round { get; set; }

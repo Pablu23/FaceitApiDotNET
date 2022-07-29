@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace FaceitApiDotNET.Models.Hubs;
+namespace FaceitApiDotNET.Models.Misc;
 
 public class OrganizerData
 {

@@ -1,4 +1,5 @@
 ﻿using FaceitApiDotNET.Models.Hubs;
+using FaceitApiDotNET.Models.Misc;
 using Newtonsoft.Json;
 
 namespace FaceitApiDotNET.Models.Championships;

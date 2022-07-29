@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using FaceitApiDotNET.Models.Misc;
+using Newtonsoft.Json;
 
 namespace FaceitApiDotNET.Models.Hubs;
 

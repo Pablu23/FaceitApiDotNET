@@ -2,7 +2,7 @@
 
 namespace FaceitApiDotNET.Models.Misc;
 
-public class MatchResults
+public class Results
 {
     [JsonProperty("winner")]
     public string Winner { get; set; }
