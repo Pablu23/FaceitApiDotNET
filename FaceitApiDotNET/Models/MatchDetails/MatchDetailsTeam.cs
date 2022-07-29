@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using FaceitApiDotNET.Models.PlayerInfo;
+using FaceitApiDotNET.Models.Standalone;
+using Newtonsoft.Json;
 
 namespace FaceitApiDotNET.Models.MatchDetails;
 
@@ -13,9 +15,12 @@ public class MatchDetailsTeam
     [JsonProperty("avatar")]
     public string Avatar { get; set; }
 
-    [JsonProperty("roster")]
-    public List<Roster> Roster { get; set; }
+    // [JsonProperty("roster")]
+    // public List<Roster> Roster { get; set; }
 
+    [JsonProperty("roster")]
+    public List<Player> Roster { get; set; }
+    
     [JsonProperty("roster_v1")]
     public dynamic RosterV1 { get; set; }
     

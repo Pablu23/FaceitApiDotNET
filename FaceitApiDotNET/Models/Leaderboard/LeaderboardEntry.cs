@@ -1,4 +1,6 @@
 ﻿using FaceitApiDotNET.Models.Championships;
+using FaceitApiDotNET.Models.PlayerInfo;
+using FaceitApiDotNET.Models.Standalone;
 using Newtonsoft.Json;
 
 namespace FaceitApiDotNET.Models.Leaderboard;
@@ -18,7 +20,7 @@ public class LeaderboardEntry
     public int Played { get; set; }
 
     [JsonProperty("player")]
-    public ChampionshipPlayer Player { get; set; }
+    public Player Player { get; set; }
 
     [JsonProperty("points")]
     public int Points { get; set; }

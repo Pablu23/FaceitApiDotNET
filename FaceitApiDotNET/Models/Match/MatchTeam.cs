@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using FaceitApiDotNET.Models.PlayerInfo;
+using FaceitApiDotNET.Models.Standalone;
+using Newtonsoft.Json;
 
 namespace FaceitApiDotNET.Models.Match;
 
@@ -17,5 +19,5 @@ public class MatchTeam
     public string Type { get; set; }
 
     [JsonProperty("players")]
-    public List<MatchPlayer> Players { get; set; }
+    public List<Player> Players { get; set; }
 }

@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using FaceitApiDotNET.Models.Standalone;
+using Newtonsoft.Json;
+using FaceitApiDotNET.Models.PlayerInfo;
 
 namespace FaceitApiDotNET.Models.Championships;
 
@@ -28,9 +30,12 @@ public class ChampionshipTeam
     [JsonProperty("leader")]
     public string Leader { get; set; }
 
-    [JsonProperty("members")]
-    public List<ChampionshipPlayer> Members { get; set; }
+    // [JsonProperty("members")]
+    // public List<ChampionshipPlayer> Members { get; set; }
 
+    [JsonProperty("members")]
+    public List<Player> Members { get; set; }
+    
     [JsonProperty("name")]
     public string Name { get; set; }
 
