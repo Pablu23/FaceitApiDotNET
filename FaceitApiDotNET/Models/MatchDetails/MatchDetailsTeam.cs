@@ -16,6 +16,9 @@ public class MatchDetailsTeam
     [JsonProperty("roster")]
     public List<Roster> Roster { get; set; }
 
+    [JsonProperty("roster_v1")]
+    public dynamic RosterV1 { get; set; }
+    
     [JsonProperty("substituted")]
     public bool Substituted { get; set; }
 
