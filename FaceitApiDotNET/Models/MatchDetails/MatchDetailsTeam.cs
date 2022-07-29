@@ -15,11 +15,8 @@ public class MatchDetailsTeam
     [JsonProperty("avatar")]
     public string Avatar { get; set; }
 
-    // [JsonProperty("roster")]
-    // public List<Roster> Roster { get; set; }
-
     [JsonProperty("roster")]
-    public List<Player> Roster { get; set; }
+    public List<Player> Players { get; set; }
     
     [JsonProperty("roster_v1")]
     public dynamic RosterV1 { get; set; }
