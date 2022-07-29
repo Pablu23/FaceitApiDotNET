@@ -2,7 +2,7 @@
 
 namespace FaceitApiDotNET.Models.Match;
 
-public class GamePlayer
+public class MatchPlayer
 {
     [JsonProperty("player_id")]
     public string PlayerId { get; set; }

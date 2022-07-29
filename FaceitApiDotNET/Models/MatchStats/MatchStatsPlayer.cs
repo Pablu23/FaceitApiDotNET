@@ -10,6 +10,9 @@ public class MatchStatsPlayer
     [JsonProperty("nickname")]
     public string Nickname { get; set; }
 
+    // [JsonProperty("player_stats")]
+    // public PlayerStats PlayerStats { get; set; }
+    
     [JsonProperty("player_stats")]
-    public PlayerStats PlayerStats { get; set; }
+    public Dictionary<string, string> PlayerStats { get; set; }
 }

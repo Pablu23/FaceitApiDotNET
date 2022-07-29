@@ -2,7 +2,7 @@
 
 namespace FaceitApiDotNET.Models.Match;
 
-public class Team
+public class MatchTeam
 {
     [JsonProperty("team_id")]
     public string TeamId { get; set; }
@@ -17,5 +17,5 @@ public class Team
     public string Type { get; set; }
 
     [JsonProperty("players")]
-    public List<GamePlayer> Players { get; set; }
+    public List<MatchPlayer> Players { get; set; }
 }

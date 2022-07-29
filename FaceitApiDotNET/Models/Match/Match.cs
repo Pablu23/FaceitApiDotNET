@@ -28,7 +28,7 @@ public class Match
     public int TeamsSize { get; set; }
 
     [JsonProperty("teams")]
-    public Dictionary<string, Team> Teams { get; set; }
+    public Dictionary<string, MatchTeam> Teams { get; set; }
 
     [JsonProperty("playing_players")]
     public List<string> PlayingPlayers { get; set; }
