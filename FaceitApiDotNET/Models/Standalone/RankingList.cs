@@ -8,7 +8,7 @@ public class RankingList
     public int End { get; set; }
 
     [JsonProperty("items")]
-    public List<Ranking> Items { get; set; }
+    public List<Ranking>? Items { get; set; }
 
     [JsonProperty("position")]
     public int Position { get; set; }

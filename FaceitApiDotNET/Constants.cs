@@ -40,16 +40,16 @@ public static class Constants
     public static string GetHubMatchesUrl(string hubId, string type, int offset, int limit) =>
         $"{BaseUrl}/hubs/{hubId}/matches?type={type}&offset={offset}&limit={limit}";
 
-    public static string GetHubMembersUrl(string hubId, string type, int offset, int limit) =>
-        $"{BaseUrl}/hubs/{hubId}/members?type={type}&offset={offset}&limit={limit}";
+    public static string GetHubMembersUrl(string hubId, int offset, int limit) =>
+        $"{BaseUrl}/hubs/{hubId}/members?offset={offset}&limit={limit}";
 
-    public static string GetHubRolesUrl(string hubId, string type, int offset, int limit) =>
-        $"{BaseUrl}/hubs/{hubId}/roles?type={type}&offset={offset}&limit={limit}";
+    public static string GetHubRolesUrl(string hubId, int offset, int limit) =>
+        $"{BaseUrl}/hubs/{hubId}/roles?offset={offset}&limit={limit}";
 
     public static string GetHubRulesUrl(string hubId) => $"{BaseUrl}/hubs/{hubId}/rules";
 
-    public static string GetHubStatsUrl(string hubId, string type, int offset, int limit) =>
-        $"{BaseUrl}/hubs/{hubId}/stats?type={type}&offset={offset}&limit={limit}";
+    public static string GetHubStatsUrl(string hubId, int offset, int limit) =>
+        $"{BaseUrl}/hubs/{hubId}/stats?offset={offset}&limit={limit}";
 
     #endregion
 
@@ -71,7 +71,7 @@ public static class Constants
     public static string GetLeaderboardsHubsSeasonalUrl(string hubId, string season, int offset, int limit) =>
         $"{BaseUrl}/leaderboards/hubs/{hubId}/seasons/{season}?offset={offset}&limit={limit}";
 
-    public static string GetLeaderUrl(string leaderboardId, int offset, int limit) =>
+    public static string GetLeaderboardUrl(string leaderboardId, int offset, int limit) =>
         $"{BaseUrl}/leaderboards/{leaderboardId}?offset={offset}&limit={limit}";
 
     #endregion
@@ -99,17 +99,22 @@ public static class Constants
     public static string GetOrganizerHubsUrl(string organizerId, int offset, int limit) =>
         $"{BaseUrl}/organizers/{organizerId}/hubs?offset={offset}&limit={limit}";
 
-    public static string GetOrganizerHubsUrl(string organizerId, string type, int offset, int limit) =>
+    public static string GetOrganizerTournamentsUrl(string organizerId, int offset, int limit) =>
+        $"{BaseUrl}/organizers/{organizerId}/tournaments?offset={offset}&limit={limit}";
+
+    public static string GetOrganizerTournamentsUrl(string organizerId, string type, int offset, int limit) =>
         $"{BaseUrl}/organizers/{organizerId}/tournaments?type={type}&offset={offset}&limit={limit}";
 
     #endregion
 
     #region Players
 
-    public static string GetPlayerDetailsUrl(string nickname, string game, string gamePlayerId) =>
-        $"{BaseUrl}/players?nickname={nickname}&game={game}&game_player_id={gamePlayerId}";
+    public static string GetPlayerDetailsUrl(string nickname) => $"{BaseUrl}/players?nickname={nickname}";
 
-    public static string GetPlayerDetailsUrl(string playerId) => $"{BaseUrl}/players/{playerId}";
+    public static string GetPlayerDetailsUrl(string game, string gamePlayerId) =>
+        $"{BaseUrl}/players?game={game}&game_player_id={gamePlayerId}";
+
+    public static string GetPlayerDetailsByIdUrl(string playerId) => $"{BaseUrl}/players/{playerId}";
 
     public static string GetPlayerHistoryUrl(string playerId, string game, string unixFrom, string unixTo, int offset,
         int limit) =>
@@ -185,9 +190,9 @@ public static class Constants
 
     public static string GetTournamentMatchesUrl(string tournamentId, int offset, int limit) =>
         $"{BaseUrl}/tournaments/{tournamentId}/matches?offset={offset}&limit={limit}";
-    
+
     public static string GetTournamentTeamsUrl(string tournamentId, int offset, int limit) =>
         $"{BaseUrl}/tournaments/{tournamentId}/teams?offset={offset}&limit={limit}";
-    
+
     #endregion
 }

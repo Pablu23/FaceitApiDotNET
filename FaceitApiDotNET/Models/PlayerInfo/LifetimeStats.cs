@@ -11,7 +11,7 @@ public class LifetimeStats
     public string GameId { get; set; }
 
     [JsonProperty("lifetime")]
-    public GeneralStats Lifetime { get; set; }
+    public Dictionary<string, GeneralStats> Lifetime { get; set; }
 
     [JsonProperty("segments")]
     public List<Segment> Segments { get; set; }  
