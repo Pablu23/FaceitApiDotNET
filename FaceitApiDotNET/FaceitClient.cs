@@ -33,7 +33,7 @@ public class FaceitClient
         if (response.IsSuccessStatusCode)
         {
             return JsonConvert.DeserializeObject<T>(response.Content.ReadAsStringAsync()
-                .GetAwaiter().GetResult());
+                .GetAwaiter().GetResult()) ?? throw new InvalidOperationException();
         }
 
         throw new Exception(response.StatusCode.ToString());
@@ -295,7 +295,8 @@ public class FaceitClient
     {
         if (string.IsNullOrEmpty(unixTo))
             unixTo = DateTime.Now.Ticks.ToString();
-        string url = Constants.GetPlayerHistoryUrl(playerId, game, unixFrom, unixTo, offset, limit);
+        //string url = Constants.GetPlayerHistoryUrl(playerId, game, unixFrom, unixTo, offset, limit);
+        string url = Constants.GetPlayerHistoryUrl(playerId, game, offset, limit);
 
         return GetResponse<InformationList<Match>>(url);
     }

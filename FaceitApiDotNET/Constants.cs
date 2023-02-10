@@ -1,5 +1,7 @@
 ﻿namespace FaceitApiDotNET;
 
+//TODO: Redo this to be more flexible about the inputs
+
 public static class Constants
 {
     public const string BaseUrl = "https://open.faceit.com/data/v4";
@@ -116,9 +118,10 @@ public static class Constants
 
     public static string GetPlayerDetailsByIdUrl(string playerId) => $"{BaseUrl}/players/{playerId}";
 
-    public static string GetPlayerHistoryUrl(string playerId, string game, string unixFrom, string unixTo, int offset,
+    public static string GetPlayerHistoryUrl(string playerId, string game, int offset,
         int limit) =>
-        $"{BaseUrl}/players/{playerId}/history?game={game}&from={unixFrom}&to={unixTo}&offset={offset}&limit={limit}";
+        //$"{BaseUrl}/players/{playerId}/history?game={game}&from={unixFrom}&to={unixTo}&offset={offset}&limit={limit}";
+        $"{BaseUrl}/players/{playerId}/history?game={game}&offset={offset}&limit={limit}";
 
     public static string GetPlayerHubsUrl(string playerId, int offset, int limit) =>
         $"{BaseUrl}/players/{playerId}/hubs?offset={offset}&limit={limit}";
